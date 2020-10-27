@@ -1,0 +1,53 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br />
+<br />
+
+<h1 *ngIf="myDocuments?.length">My Documents</h1>
+<br />
+<div id="myDocuments">
+    <button class="loginbtn" (click)="routeToCreateDocument()">Create new document</button>
+    <h3 *ngIf="!myDocuments?.length">You have no documents
+    </h3>
+    <br /><br />
+    <table *ngIf="myDocuments?.length">
+        <thead>
+            <tr>
+                <th>Owner</th>
+                <th>Image Url</th>
+                <th>DocumentName</th>
+                <th>Document ID</th>
+                <th>Delete</th>
+                <th>Edit</th>
+                <th>Share</th>
+                <th>Shared Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let document of myDocuments;index as i">
+                <td>{{document.owner}}</td>
+                <td><img src={{document.imageUrl}} /></td>
+                <td>{{document.documentName}}</td>
+                <td>{{document.docID}}</td>
+                <td>
+
+                    <button>
+                        <app-remove-document [docId]="document.docID"></app-remove-document>
+                    </button>
+                </td>
+                <td>
+                    <button (click)="routeToEditDocument(document)"><i class="fa fa-edit" style="font-size:18px"></i>
+
+                    </button>
+                </td>
+                <td><button (click)="routeToCreateShareDocument(document)"><i class="fa fa-share-alt"
+                            style="font-size:18px"></i></button></td>
+                <td> <button (click)="routetoGetSharedUsers(document)" class="dropbtn">Shared users</button></td>
+        <!--  <td><app-get-share-users [docID]="document.docID"></app-get-share-users></td>-->
+            </tr>
+        </tbody>
+    </table>
+</div>

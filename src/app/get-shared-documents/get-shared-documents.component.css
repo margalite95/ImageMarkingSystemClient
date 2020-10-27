@@ -1,0 +1,70 @@
+#myDocuments,#sharedDocuments {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #myDocuments td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #sharedDocuments td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #sharedDocuments tr:nth-child(even){background-color: #f2f2f2;}
+
+  #myDocuments tr:hover {background-color: #ddd;}
+  #sharedDocuments tr:hover {background-color: #ddd;}
+
+  #myDocuments th ,#sharedDocuments th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: BLACK;
+    color: white;
+    
+  }
+  table{
+    width: 60%;
+    max-width:100%;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 400px;
+  }
+  button{
+    cursor: pointer;
+
+  }
+  .loginbtn{
+    background:  #f06161;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    transform: translate(500%, 10%);  
+    cursor: pointer;
+
+}
+  h1{
+    transform: translate(40%, 10%);  
+    color: #f06161;
+    text-shadow: black 0.3px 0.3px 2px;
+font-size: 40px;
+  }
+  img{
+    width:20%;
+    height:auto;
+    border-radius: 8px;
+
+  }
+  .btn3{
+    size: 24px;
+  }
+  h3{
+    transform: translate(30%, 10%);  
+    color: black;
+    text-shadow: #f06161 0.3px 0.3px 2px;
+font-size: 40px;
+  }

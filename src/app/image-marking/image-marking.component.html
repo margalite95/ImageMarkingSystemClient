@@ -1,0 +1,61 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br/><br/>
+<div class="usr" *ngFor="let user of sharesUsers">
+  {{user}} Currently viewing  this document
+</div>
+<br/><br/>
+<h1>
+    Select marker mode:
+  </h1>
+  <br/>
+  <div class="div2">
+  <button #btnEllipse class="loginbtn">Ellipse</button>
+  <button #btnRectangle class="loginbtn" >Rectangle</button>
+</div>
+<br/><br/>
+<div class="div3">
+<div #container id="container"  style = 'height:10px;width:800px;'>
+    <img [src]="currentImg" style = 'height:1000px;width:800px;'>
+
+      <canvas #shapeCanvas class='canvas'></canvas>
+      <canvas #drawingCanvas class='canvas'></canvas>
+      
+  </div>
+</div>  
+
+  <div  class="div1">
+    <table>
+      <thead>
+        <tr>        
+            <th>Marker ID</th>
+            <th>Edit ForeColor</th>
+            <th>Edit Back Color</th>
+            <th>Delete</th>
+    
+        </tr>
+        <tbody>
+            <tr *ngFor="let marker of currentMarkers">
+                <td>
+                  {{marker.markerID}}
+                </td>
+                <td>
+                  <input [(colorPicker)]="marker.foreColor"  [style.background]="marker.foreColor" [cpPosition]="bottom"
+                  (colorPickerChange)="onChangeForeColor(marker)" />
+                </td>
+                <td>
+                  <input [(colorPicker)]="marker.backColor"  [style.background]="marker.backColor" [cpPosition]="bottom"
+                  (colorPickerChange)="onChangeBackColor(marker)" />
+                </td>
+                <td>
+                  
+                  <button><app-remove-marker (onMarkerRemoved)="onRemovedMarker($event)" [docid]="marker.docID" [markerid]="marker.markerID"></app-remove-marker></button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+  </div>
+  

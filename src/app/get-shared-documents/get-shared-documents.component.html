@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<br />
+<br />
+
+<div id="sharedDocuments">
+    <h1 *ngIf="sharedDocuments?.length">My Shared Documents</h1>
+    <h3 *ngIf="!sharedDocuments?.length">You have no shared documents
+    </h3>
+    <br /><br />
+    <table *ngIf="sharedDocuments?.length">
+        <thead>
+            <tr>
+                <th>Owner</th>
+                <th>Image Url</th>
+                <th>DocumentName</th>
+                <th>Document ID</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sharedocument of sharedDocuments;index as i">
+                <td>{{sharedocument.owner}}</td>
+                <td><img src={{sharedocument.imageUrl}} /></td>
+                <td>{{sharedocument.documentName}}</td>
+                <td>{{sharedocument.docID}}</td>
+                <td>
+                    <button>
+                        <app-remove-shared-documents [sharedocid]="sharedocument.docID" [shareduserid]="userID.Email"></app-remove-shared-documents>
+                    </button>
+                </td>
+                <td>
+                    <button (click)="routeToEditDocument(sharedocument)"><i class="fa fa-edit"
+                            style="font-size:18px"></i>
+
+                    </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

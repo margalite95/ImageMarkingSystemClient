@@ -1,0 +1,14 @@
+:root {
+   --theme-color1: #fff;
+   --theme-color2: #f06161;  
+}
+   .btn.btn-primary {
+      background-color: var(--theme-color1);
+      color: var(--theme-color2);
+      border-color:  var(--theme-color1);
+      margin-top: 8px;
+   font-weight: bold;
+   cursor: pointer;
+
+
+      }

@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header class="header colored sticky-header" data-scroll="out">
+				<div class="c-container">
+					<div class="nav-items">
+		
+	
+					<ul class="main-nav">
+						<li class="nav-item active">
+						<a class="nav-link active" routerLink=''>Home</a>
+						</li>
+						<li class="nav-item">
+						<a *ngIf="headerService.visible" class="nav-link" routerLink='myDocuments'>My Documents</a>
+
+						</li>
+						<li class="nav-item">
+							<a *ngIf="headerService.visible" class="nav-link" routerLink='sharedDocument'>My Shared Documents</a>
+						</li>
+						
+					</ul>
+						<div class="form-inline">
+							<button *ngIf="!headerService.visible"class="btn btn-outline-white mr-2" routerLink='signUp' type="submit">Sign Up</button>
+							<button *ngIf="!headerService.visible" class="btn btn-primary" routerLink='signIn' data-toggle="modal" data-target="#one">Sign In</button>
+							<h3 *ngIf="headerService.visible">Hi,&nbsp;{{userName}}&nbsp;&nbsp;</h3>
+							<button *ngIf="headerService.visible"class="btn btn-primary"routerLink='' (click)="resetUser()">Sign out</button>&nbsp;&nbsp;&nbsp;
+							<app-un-subscribe-user *ngIf="headerService.visible"></app-un-subscribe-user>
+							
+						</div>
+					</div>
+				</div>
+				
+				
+			</header>

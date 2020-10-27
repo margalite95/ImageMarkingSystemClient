@@ -1,0 +1,25 @@
+<div id="sharedUsers">
+    <div class="div3" *ngIf="!sharedUsers?.length">You did not share this document</div>
+    <br /><br />
+    <table *ngIf="sharedUsers?.length">
+        <thead>
+            <tr>
+                <th>Shared Users</th>
+                <th>Delete</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+          
+            <tr *ngFor="let user of sharedUsers;index as i">
+                <td>{{user}}</td>
+                <td>
+                  <button>
+                        <app-remove-shared-documents [sharedocid]="docID" [shareduserid]="user"></app-remove-shared-documents>
+                 </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

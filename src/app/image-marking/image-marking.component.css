@@ -1,0 +1,55 @@
+#container { position: relative; }
+.canvas { position: absolute; 
+    border: 1px solid red; 
+    top: 0; left: 0;    
+ }
+
+.loginbtn{
+    background:  #f06161;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+
+}
+table{
+    width: 0%;
+    max-width: 5%;
+
+  
+  }
+  
+  .div1{
+    float: right;
+    
+  }  
+  .div2{
+        transform: translate(30%, 50%);
+
+     }
+  .div5{
+      transform: translate(30%, 1500%);
+  
+        }
+.div3{
+            transform: translate(10%, 50%);
+border: 10px;
+             }
+  h1{
+    transform: translate(30%, 10%);  
+    color: #f06161;
+    text-shadow: black 0.3px 0.3px 2px;
+font-size: 40px;
+  }
+  table {
+    border-collapse: collapse;
+  }
+  
+  table, td, th {
+    border: 1px solid black;
+  }
+  .usr{
+    transform: translate(30%, 50%);    
+  }

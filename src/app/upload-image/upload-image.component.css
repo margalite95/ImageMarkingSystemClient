@@ -1,0 +1,18 @@
+
+  label{
+      font-size: 25px;
+  }
+  .loginbtn{
+    background: rgb(250, 113, 136);
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+
+}
+  .div1{
+    transform: translate(15%, 10%);  
+
+  }

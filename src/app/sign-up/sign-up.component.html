@@ -1,0 +1,18 @@
+<div class="totalbox border">
+    <h2>Please Create Your Acoount</h2>
+
+    <form [formGroup]="form" (ngSubmit)="signUp()"><br/><br/>
+        <input type="text" id="Email" formControlName="Email" placeholder="Email"><br/>
+        <input type="text" id="UserName" formControlName="UserName" placeholder="UserName"><br/>
+      <div *ngIf="form.get('Email').hasError('required') || form.get('UserName').hasError('required')"><br />
+        *All field is required
+      </div>
+      <div *ngIf="form.get('Email').hasError('email')"><br />
+        Email is invalid
+      </div>
+      <div class="boxcheckbox">
+        <h6 *ngIf="Result!=undefined">{{Result}}</h6>
+        <button class="loginbtn"  [disabled]="!form.valid">Login</button>
+      </div>
+    </form>
+  </div>

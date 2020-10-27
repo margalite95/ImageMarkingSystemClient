@@ -1,0 +1,25 @@
+<br /><br />
+<h3>Enter User Name to Share this Document</h3>
+
+<div class="div1">
+
+  <form [formGroup]="myForm" (submit)="CreateShareDocument()">
+    <input type="text" width="30px" id="EmailInput" formControlName="Email"
+      placeholder="Entar Email Address"><br /><br /><br />
+
+    <div *ngIf="myForm.get('Email').hasError('required')"><br />
+      *Email is required
+    </div>
+    <div *ngIf="myForm.get('Email').hasError('email')"><br />
+      Email is invalid
+    </div>
+    <h6><div class="div3" *ngIf="Result?.length"><br />
+    {{Result}}
+    </div></h6>
+ 
+    <br />
+    <button class="loginbtn" [disabled]="!myForm.valid">Create</button>
+  
+  </form>
+
+</div>

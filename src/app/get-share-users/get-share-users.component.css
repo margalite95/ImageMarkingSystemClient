@@ -1,0 +1,36 @@
+#sharedUsers {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #sharedUsers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  #sharedUsers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  } 
+  #sharedUsers tr:nth-child(even){background-color: #f2f2f2;}
+  #sharedUsers tr:hover {background-color: #ddd;}
+  #sharedUsers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: BLACK;
+    color: white;
+  }
+  table{
+    width: 30%;
+    max-width: 100%;
+    margin: 100px;
+    padding: 10px;
+    margin-left: 600px;
+    text-align: center;
+  }
+  .div3{
+    transform: translate(30%, 300%);  
+    color: black;
+    text-shadow: #f06161 0.3px 0.3px 2px;
+font-size: 40px;
+  }

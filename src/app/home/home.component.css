@@ -1,0 +1,18 @@
+div{
+   background-image: url(C:\Users\User\Desktop\mizrachi\FINAL_PROJECT\ImageMarkingClient1\DrawindSampl\src\assets\images\home.jpg); 
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    background-size: 100% 100%;
+    height: 100vh;
+    opacity: 0.2;
+ 
+ }
+ .centered {
+    position: absolute;
+    top: 50%;
+    color: #f06161;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:60px;
+    text-shadow: black 1px 1px 4px;
+  }
